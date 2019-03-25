@@ -12,6 +12,7 @@
 		9A23E13E22461CAD00146C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A23E13C22461CAD00146C6D /* Main.storyboard */; };
 		9A23E14022461CAF00146C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A23E13F22461CAF00146C6D /* Assets.xcassets */; };
 		9A23E14322461CAF00146C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A23E14122461CAF00146C6D /* LaunchScreen.storyboard */; };
+		9A23E16B2248BB3200146C6D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A23E16A2248BB3200146C6D /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9A23E13F22461CAF00146C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A23E14222461CAF00146C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A23E14422461CAF00146C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A23E16A2248BB3200146C6D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		9A23E12C22461CAD00146C6D = {
 			isa = PBXGroup;
 			children = (
+				9A23E16A2248BB3200146C6D /* SettingTableViewController.swift */,
 				9A23E13722461CAD00146C6D /* TipCalculator */,
 				9A23E13622461CAD00146C6D /* Products */,
 			);
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A23E16B2248BB3200146C6D /* SettingTableViewController.swift in Sources */,
 				9A23E13B22461CAD00146C6D /* ViewController.swift in Sources */,
 				9A23E13922461CAD00146C6D /* AppDelegate.swift in Sources */,
 			);
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Y7PPXA97Y;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.darrelmuonekwu.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Y7PPXA97Y;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.darrelmuonekwu.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

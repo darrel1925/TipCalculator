@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let tipPercentages = [0.15, 0.18, 0.20]
+    
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
@@ -25,7 +27,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateTIP(_ sender: Any) {
-        let tipPercentages = [0.15, 0.18, 0.20]
         
         let bill = Double(billField.text!) ?? 0
         
