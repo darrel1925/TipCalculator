@@ -16,10 +16,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var amonutSpent: UILabel!
+    @IBOutlet weak var tipDiscription: UILabel!
+    @IBOutlet weak var totalDiscription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if UserDefaults.standard.object(forKey: "currentOn") == nil {
+            
+            UserDefaults.standard.setValue("usDollar", forKey: "currentOn")
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        calculate()
     }
     
     @IBAction func onTap(_ sender: Any) {
@@ -28,13 +39,44 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTIP(_ sender: Any) {
         
+        calculate()
+        
+    }
+    
+    func calculate() {
         let bill = Double(billField.text!) ?? 0
         
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex ]
         let total = bill + tip
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        if UserDefaults.standard.object(forKey: "currentOn") as! String == "usDollar" {
+
+            tipDiscription.text = "Tip Amount:"
+            totalDiscription.text = "Total:"
+            amonutSpent.text = "Amount Spent"
+            
+            tipLabel.text = String(format: "$%.2f", tip)
+            totalLabel.text = String(format: "$%.2f", total)
+        }
+        
+        else if UserDefaults.standard.object(forKey: "currentOn") as! String == "peso" {
+            tipDiscription.text = "Gratificación:"
+            totalDiscription.text = "Total:"
+            amonutSpent.text = "Dinero Gastado"
+            
+            tipLabel.text = String(format: "Mex$%.2f", tip)
+            totalLabel.text = String(format: "Mex$%.2f", total)
+        }
+        
+        else if UserDefaults.standard.object(forKey: "currentOn") as! String == "euro" {
+            tipDiscription.text = "Le Pourboire:"
+            totalDiscription.text = "Total:"
+            amonutSpent.text = "Argent épensé"
+            
+            tipLabel.text = String(format: "€%.2f", tip)
+            totalLabel.text = String(format: "€%.2f", total)
+        }
+
     }
     
 

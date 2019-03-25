@@ -18,15 +18,37 @@ class SettingTableViewController: UIViewController {
         
         
         
-        if UserDefaults.standard.object(forKey: "usDollar") == nil {
+        if UserDefaults.standard.object(forKey: "currentOn") == nil {
             UserDefaults.standard.setValue(true, forKey: "usDollar")
             UserDefaults.standard.setValue(false, forKey: "peso")
             UserDefaults.standard.setValue(false, forKey: "euro")
             UserDefaults.standard.setValue("usDollar", forKey: "currentOn")
             
+        }
+        
+        let current = UserDefaults.standard.object(forKey: "currentOn") as! String
+        print(current)
+        if current == "usDollar" {
+            usDollar.setOn(true, animated: true)
+            usDollar.isOn = true
+            peso.isOn = false
+            euro.isOn = false
+        }
+        
+        else if current == "peso" {
+            peso.setOn(true, animated: true)
+            peso.isOn = true
+            usDollar.isOn = false
+            euro.isOn = false
+        }
+        
+        else if current == "euro" {
+            euro.setOn(true, animated: true)
+            euro.isOn == true
+            usDollar.isOn = false
+            peso.isOn = false
             
         }
-        print(UserDefaults.standard.object(forKey: "peso"))
     }
     
     
