@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalDiscription: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if UserDefaults.standard.object(forKey: "currentOn") == nil {
