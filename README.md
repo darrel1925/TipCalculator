@@ -37,9 +37,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-** Learning how user defaults work
-** Having the settings page communicate with the main view controller
-** Learning what a Navigation Conroller is and how to connect View Controllers to it
+* Learning how user defaults work
+* Having the settings page communicate with the main view controller
+* Learning what a Navigation Conroller is and how to connect View Controllers to it
 
 ## License
 
