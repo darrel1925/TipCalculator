@@ -4,7 +4,7 @@
 
 Submitted by: **Darrel Muonekwu**
 
-Time spent: **2** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
@@ -13,7 +13,7 @@ The following **required** functionality is complete:
 * [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [ ] Settings page to change the default tip percentage.
+* [x] Settings page to change the default tip percentage.
 * [ ] UI animations
 * [x] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
-- [x] Add the option to change the currency and language of the app.
+- [x] Add the option to change the type of currency and language of the app.
 - [x] Add a loading screen for the app while it's launching
 
 ## Video Walkthrough 
@@ -36,6 +36,10 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+** Learning how user defaults work
+** Having the settings page communicate with the main view controller
+** Learning what a Navigation Conroller is and how to connect View Controllers to it
 
 ## License
 
