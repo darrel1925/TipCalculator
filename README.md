@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
 - [x] Add the option to change the type of currency and language of the app.
 - [x] Add a loading screen for the app while it's launching
 
